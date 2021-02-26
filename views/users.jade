@@ -1,0 +1,16 @@
+extends layout
+head 
+  link(rel='stylesheet', src='../public/stylesheets/style.css')
+  script(src='../public/javascripts/scripts.js')
+body  
+
+block content
+  h1= title
+  h3 Nombre: #{name}
+  h3 Apellidos: #{surname}
+  h3 Descripcion: #{description}
+  h3 Titulo: #{title}
+  br
+  br 
+  a(href="/") INICIO
+

@@ -1,0 +1,39 @@
+extends layout
+head 
+  link(rel='stylesheet', src='../public/stylesheets/style.css')
+    script(src='../public/javascripts/scripts.js')
+block content
+   
+    div.container
+        div.nav
+            a(href="/") Inicio 
+            a(href="/users") Usuarios  
+        h1= title
+            div.row
+                div.col
+               
+                    form(action='/createUser', method="post")
+                        div.form-control
+                            div.col
+                                span.label Name
+                                    input(type="text", name="name")
+                            div.col
+                                span.label Surname
+                                    input(type="text", name="surname")
+                            div.col
+                                span.label Description
+                                    textarea(name="description", cols="40", rows="5")
+                            div.col
+                                span.label Title
+                                    input(type="text", name="title")
+                            div.col
+                                input(type="submit", value="add")
+
+                                div.row
+                                    div.col
+                                
+                                        h2 Para empezar odio jade, segundo nacho te he hecho los dos ejercicio juntos pero solo 5 paginas y despues te mando el enlace de mi portfolio que presentare para final de trimestre. :)
+                                        a(href="https://ramonchu96.github.io/Portfolio")
+                                        h2 Aun le queda
+
+                                
