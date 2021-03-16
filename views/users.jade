@@ -1,16 +1,25 @@
 extends layout
 head 
   link(rel='stylesheet', src='../public/stylesheets/style.css')
-  script(src='../public/javascripts/scripts.js')
-body  
-
+  script(src='../public/javascripts/scripts.js') 
 block content
-  h1= title
-  h3 Nombre: #{name}
-  h3 Apellidos: #{surname}
-  h3 Descripcion: #{description}
-  h3 Titulo: #{title}
-  br
-  br 
-  a(href="/") INICIO
+ 
+   header: nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current='page' href='/') Home
+            li.nav-item
+              a.nav-link(href='/users') Users
+            li.nav-item
+              a.nav-link(href='/gallery') Galeria
+    body
+      h1= title
+        h3 Nombre: #{name}
+        h3 Apellidos: #{surname}
+        h3 Descripcion: #{description}
+        h3 Titulo: #{title}
+        br
+        br 
+
 

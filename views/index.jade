@@ -1,39 +1,57 @@
 extends layout
-head 
-  link(rel='stylesheet', src='../public/stylesheets/style.css')
+head
+   
+    link(rel='stylesheet', src='../public/stylesheets/style.css')
     script(src='../public/javascripts/scripts.js')
+
 block content
    
-    div.container
-        div.nav
-            a(href="/") Inicio 
-            a(href="/users") Usuarios  
-        h1= title
-            div.row
-                div.col
-               
-                    form(action='/createUser', method="post")
-                        div.form-control
-                            div.col
-                                span.label Name
-                                    input(type="text", name="name")
-                            div.col
-                                span.label Surname
-                                    input(type="text", name="surname")
-                            div.col
-                                span.label Description
-                                    textarea(name="description", cols="40", rows="5")
-                            div.col
-                                span.label Title
-                                    input(type="text", name="title")
-                            div.col
-                                input(type="submit", value="add")
+    header: nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current='page' href='/') Home
+            li.nav-item
+              a.nav-link(href='/users') Users
+            li.nav-item
+              a.nav-link(href='/gallery') Galeria
 
-                                div.row
-                                    div.col
-                                
-                                        h2 Para empezar odio jade, segundo nacho te he hecho los dos ejercicio juntos pero solo 5 paginas y despues te mando el enlace de mi portfolio que presentare para final de trimestre. :)
-                                        a(href="https://ramonchu96.github.io/Portfolio")
-                                        h2 Aun le queda
+            
+    body: .container
+    
+          
+
+
+
+
+            form.row.g-3.needs-validation(action='/createUser', method="post")
+                .row
+                    .col-md-3     
+                        label.form-label Name
+                            input(type="text", name="name")
+            
+                    .col-md-4
+                        label.form-label Surname
+                            input(type="text", name="surname")
+                
+                    .col-md-3
+                    label.form-label Description
+                        textarea(name="description")
+                
+                    .col-md-1
+                    label.form-label Title
+                        input(type="text", name="title")
+                .row
+                    .col-md-3
+                        input.h6.bg-white(type="submit", value="Añadir")
+    
+    footer.bg-dark.text-center.text-white 
+        .navbar.navbar-expand-lg.navbar-dark.bg-dark
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                a.nav-link(aria-current='page' href='https://ramonchu96.github.io/Portfolio/') Curriculum
+                li.nav-item
+                a.nav-link(href='https://github.com/ramonchu96') GitHub
+                        
 
                                 

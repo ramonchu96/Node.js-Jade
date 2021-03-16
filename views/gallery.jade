@@ -1,0 +1,42 @@
+extends layout
+head
+   
+  link(rel='stylesheet', src='../public/stylesheets/gallery.css')
+  script(src='../public/javascripts/scripts.js')
+
+ block content
+   
+    header: nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current='page' href='/') Home
+            li.nav-item
+              a.nav-link(href='/users') Users
+            li.nav-item
+              a.nav-link(href='/gallery') Galeria
+
+            
+    body: .container
+      .row
+        .grid
+          .grid-sizer.col-xs-12.col-sm-6.col-md-4.col-lg-4
+          .col-xs-4.col-sm-6.col-md-4.grid-item.people
+            a.prettyphoto(href='https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg' rel='prettyPhoto[portfolio]')
+              img.thumbnail.img-responsive(src='https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg' alt='Venice beach, California.')
+          .col-xs-4.col-sm-6.col-md-4.grid-item.nature
+            a.prettyphoto(href='https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg' rel='prettyPhoto[portfolio]')
+              img.thumbnail.img-responsive(src='https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg' alt='Aurora over Svalbard archipelago, Norway.')
+          .col-xs-4.col-sm-6.col-md-4.grid-item.nature
+            a.prettyphoto(href='https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg' rel='prettyPhoto[portfolio]')
+              img.thumbnail.img-responsive(src='https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg' alt='Flying around Mt. Everest, Nepal.')
+          
+
+          
+    footer.bg-dark.text-center.text-white 
+        .navbar.navbar-expand-lg.navbar-dark.bg-dark
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                a.nav-link(aria-current='page' href='https://ramonchu96.github.io/Portfolio/') Curriculum
+                li.nav-item
+                a.nav-link(href='https://github.com/ramonchu96') GitHub
